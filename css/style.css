@@ -587,7 +587,8 @@ body {
 .container {
   max-width: 1150px;
   padding: 0px 25px;
-  margin: 0 auto;
+  margin: 0px auto;
+
 }
 
 .top-header {
@@ -3914,11 +3915,6 @@ body {
   }
 }
 
-@media (max-width: 450px) {
-  .container {
-    padding: 0 13px;
-  }
-}
 
 @media (max-width: 445px) {
   .colums-itemses__body {
@@ -3994,4 +3990,8 @@ body {
   .time {
     margin-left: 6px;
   }
+}
+
+.swiper-container{
+  overflow: hidden;
 }
