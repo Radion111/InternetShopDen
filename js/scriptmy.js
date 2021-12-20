@@ -153,12 +153,6 @@ slidesPerView: 3,
 
 });
 
-
-
-
-
-
-
 const swiper5 =new Swiper('.slider-firsttt', 
 { 
 
@@ -303,7 +297,7 @@ breakpoints: {
 
 
 
-var tapSlider = document.getElementById('polzunok');
+let tapSlider = document.getElementById('polzunok');
 
 noUiSlider.create(tapSlider, {
     start: 9,
@@ -373,22 +367,6 @@ $(document).ready(function () {
    });
    $(".secondtab__a:first").click();
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
    $(document).ready(function(){
