@@ -1,550 +1,494 @@
+const swiper1 = new Swiper(".bigslider2colum ", {
+  speed: 800,
 
+  observer: true,
+  observeParent: true,
+  observeSlideChildren: true,
 
+  spaceBetween: 30,
 
-// ! Меню бургер 
-$(document).ready(function() {
-   $('.burger-menu').click(function(event) {
-   
-      $(".burger-menu").toggleClass("active");
-      $(".header-center__ul").toggleClass("active");
-      $('body').toggleClass('lock');
-   });
+  autoplay: {
+    //задержка при количество секунд на задержку слайдера
+    delay: 3000,
+  },
+
+  slidesPerView: 3,
 });
 
+const swiper2 = new Swiper(".myslidertttt ", {
+  observer: true,
+  observeParent: true,
 
+  // observeSlideChildren: true,
+  // для добавления стрелок можем использовать любой класс
+  navigation: {
+    nextEl: ".slidersecondto__next",
+    prevEl: ".slidersecondto__prev",
+  },
 
+  speed: 800,
 
-$(document).ready(function () {
-   $(".slidersecondto__a").click(function (e) { 
-      e.preventDefault();
-      $(".slidersecondto__a").removeClass("activeaaa");
-      $(".slidersecondto__poid").removeClass("activetabbbbb");
-      $(this).addClass("activeaaa");
-      $($(this).attr("href")).addClass("activetabbbbb");
-    
-   });
-   $(".slidersecondto__a:first").click();
-});
+  spaceBetween: 30,
 
+  autoplay: {
+    //задержка при количество секунд на задержку слайдера
+    delay: 3000,
+  },
 
-const swiper1 =new Swiper('.bigslider2colum ', 
-{ 
-   speed: 800,
+  slidesPerView: 3,
 
-   observer: true,
-   observeParent: true,
-   observeSlideChildren: true,
-   
-   spaceBetween: 30,
-   
-   autoplay: {
-   //задержка при количество секунд на задержку слайдера  
-   delay: 3000,
-   },
-   
-   slidesPerView: 3,
-   
-
-});
-
-const swiper2 =new Swiper('.myslidertttt ', 
-{ 
-
-   observer: true,
-observeParent: true,
-
-// observeSlideChildren: true,
-// для добавления стрелок можем использовать любой класс 
-navigation: {
-nextEl:'.slidersecondto__next',
-prevEl:'.slidersecondto__prev',
- },
-
-speed: 800,
-
-
-
-spaceBetween: 30,
-
-autoplay: {
-//задержка при количество секунд на задержку слайдера  
-delay: 3000,
-},
-
-slidesPerView: 3,
-
-breakpoints: {
-   "1060": {
-     slidesPerView: 3,
-     spaceBetween: 20,
-   },
-   "880":{
+  breakpoints: {
+    1060: {
       slidesPerView: 3,
-   },
-   "545":{
+      spaceBetween: 20,
+    },
+    880: {
+      slidesPerView: 3,
+    },
+    545: {
       slidesPerView: 2,
-      
-   },
-   "320":{ 
+    },
+    320: {
       spaceBetween: 0,
       slidesPerView: 1,
-    
-   },
- }
-
+    },
+  },
 });
 
+const swiper3 = new Swiper(".myslider22 ", {
+  observer: true,
+  observeParent: true,
 
+  observeSlideChildren: true,
 
-const swiper3 =new Swiper('.myslider22 ', 
-{ 
+  slidesPerView: 3,
 
-   observer: true,
-   observeParent: true,
-   
-   observeSlideChildren: true,
+  // для добавления стрелок можем использовать любой класс
+  navigation: {
+    nextEl: ".slidersecondto__next",
+    prevEl: ".slidersecondto__prev",
+  },
 
-   slidesPerView: 3,
+  speed: 800,
 
-// для добавления стрелок можем использовать любой класс 
-navigation: {
-nextEl:'.slidersecondto__next',
-prevEl:'.slidersecondto__prev',
- },
+  spaceBetween: 30,
 
-speed: 800,
-
-
-
-spaceBetween: 30,
-
-autoplay: {
-//задержка при количество секунд на задержку слайдера  
-delay: 3000,
-},
-
-
-
+  autoplay: {
+    //задержка при количество секунд на задержку слайдера
+    delay: 3000,
+  },
 });
-const swiper4 =new Swiper('.myslidermyfix ', 
-{ 
-   observer: true,
-   observeParent: true,
-   
-   observeSlideChildren: true,
-// для добавления стрелок можем использовать любой класс 
-navigation: {
-nextEl:'.slidersecondto__next',
-prevEl:'.slidersecondto__prev',
- },
+const swiper4 = new Swiper(".myslidermyfix ", {
+  observer: true,
+  observeParent: true,
 
-speed: 800,
+  observeSlideChildren: true,
+  // для добавления стрелок можем использовать любой класс
+  navigation: {
+    nextEl: ".slidersecondto__next",
+    prevEl: ".slidersecondto__prev",
+  },
 
+  speed: 800,
 
-spaceBetween: 30,
+  spaceBetween: 30,
 
-autoplay: {
-//задержка при количество секунд на задержку слайдера  
-delay: 3000,
-},
+  autoplay: {
+    //задержка при количество секунд на задержку слайдера
+    delay: 3000,
+  },
 
-slidesPerView: 3,
-
-
+  slidesPerView: 3,
 });
 
-const swiper5 =new Swiper('.slider-firsttt', 
-{ 
+const swiper5 = new Swiper(".slider-firsttt", {
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
 
-pagination: {
-el:'.swiper-pagination',
-clickable: true,
-}, 
+  speed: 800,
 
-speed: 800,
+  observer: true,
 
-observer: true,
+  observeParent: true,
 
-observeParent: true,
+  observeSlideChildren: true,
 
-observeSlideChildren: true,
+  autoplay: {
+    delay: 3000,
+  },
 
-autoplay: {
+  slidesPerView: 1,
+  effect: "fade",
+});
 
-delay: 3000,
-},
+new Swiper(".tabulation__slider", {
+  navigation: {
+    nextEl: ".ssbutton-next",
+    prevEl: ".ssbutton-prev",
+  },
+  // Для обновления свайпера при изменения елементов слайдера
+  observer: true,
+  //  Для обновления слайдера при изменении родителя
+  observeParent: true,
+  //  для обновления слайдера при изменения дочерних елементов
+  observeSlideChildren: true,
 
-slidesPerView: 1,
- effect:'fade',
+  speed: 800,
 
+  autoplay: {
+    delay: 3000,
+  },
 
+  slidesPerView: 4,
+  spaceBetween: 30,
+});
+
+new Swiper(".slider222", {
+  navigation: {
+    nextEl: ".next",
+    prevEl: ".last",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+
+  loop: true,
+  speed: 800,
+  autoplay: {
+    delay: 3000,
+  },
+});
+new Swiper(".myslider5", {
+  pagination: {
+    el: ".swiper-pagination",
+
+    clickable: true,
+  },
+  speed: 900,
+  loop: true,
+  autoplay: {
+    delay: 3000,
+  },
+});
+
+new Swiper(".sliderflex2", {
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  speed: 800,
+  autoplay: {
+    delay: 3000,
+  },
+  slidesPerView: 1,
+  loop: true,
+  effect: "cube",
+});
+
+new Swiper(".sliderflex11", {
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+
+  speed: 800,
+  autoplay: {
+    delay: 3000,
+  },
+  loop: true,
+});
+
+new Swiper(".sliderfourinitial", {
+  pagination: {
+    el: ".swiper-pagination",
+
+    clickable: true,
+  },
+  speed: 800,
+  autoplay: {
+    delay: 3000,
+  },
+  loop: true,
+});
+
+const swiper6 = new Swiper(".mysponsorslider", {
+  slidesPerView: 6,
+
+  spaceBetween: 30,
+  centerSlides: true,
+  loop: true,
+
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      centerSlides: true,
+      spaceBetween: 4,
+    },
+    420: {
+      slidesPerView: 3,
+      centerSlides: true,
+      spaceBetween: 0,
+    },
+    600: {
+      slidesPerView: 3,
+      centerSlides: true,
+      spaceBetween: 0,
+    },
+    750: {
+      slidesPerView: 4,
+      centerSlides: true,
+      spaceBetween: 0,
+    },
+    768: {
+      slidesPerView: 5,
+      centerSlides: true,
+      spaceBetween: 0,
+    },
+    990: {
+      slidesPerView: 6,
+    },
+  },
+});
+
+const swiper8 = new Swiper(".popular-categories", {
+  navigation: {
+    nextEl: ".downgoodsec__nextarow",
+    prevEl: ".downgoodsec__prevarow",
+  },
+  speed: 800,
+
+  observer: true,
+  //Для обновления слайдера при изменении родителя
+  observeParent: true,
+  //для обновления слайдера при изменения дочерних елементов
+  observeSlideChildren: true,
+  //для автопроигривания слайдера
+
+  autoplay: {
+    delay: 3000,
+  },
+
+  slidesPerView: 4,
+
+  spaceBetween: 30,
+  // ! Изменения моего главного слайдера
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+    },
+    768: {
+      slidesPerView: 2,
+    },
+    900: {
+      slidesPerView: 3,
+      spaceBetween: 0,
+    },
+
+    1100: {
+      slidesPerView: 4,
+    },
+  },
+});
+
+let tapSlider = document.getElementById("polzunok");
+
+const swiper10 = new Swiper(".secondtab__slider", {
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+
+  speed: 800,
+
+  // Лутше по умолчанию использовать в каждом слайдере
+  observer: true,
+  observeParent: true,
+  //
+  // observeSlideChildren: true,
+
+  autoplay: {
+    //задержка при количество секунд на задержку слайдера
+    delay: 3000,
+  },
+
+  slidesPerView: 3,
+  // Отступ между слайдами если указивает для показа несколько слайдеров
+  spaceBetween: 30,
+  // для прокрутки бесконечно слайда нюанси не работает при скроле так что эго ,надо отключать,не работает  с мультирадностю
+});
+
+// ! ползунок переписать
+noUiSlider.create(tapSlider, {
+  start: 9,
+  step: 1,
+  behaviour: "tap",
+  connect: [false, true],
+  range: {
+    min: 1,
+    max: 24,
+  },
+});
+
+// ! Меню бургер
+
+let burgermenu = document.querySelector(".burger-menu");
+burgermenu.addEventListener("click", function burgerMenu(event) {
+  event.preventDefault();
+  burgermenu.classList.toggle("active");
+  document.querySelector(".header-center__ul").classList.toggle("active");
+  document.getElementsByTagName("body")[0].classList.toggle("active");
+});
+// Нужно зделать что то здесь
+
+let slideralllink = document.querySelectorAll(".slidersecondto__a");
+let sliderconten = document.querySelectorAll(".slidersecondto__poid");
+
+slideralllink.forEach((item) => {
+  item.addEventListener("click", function name(event) {
+    event.preventDefault();
+    let id = event.target.getAttribute("href");
+    slideralllink.forEach((item2) => {
+      item2.classList.remove("activeaaa");
+    });
+    sliderconten.forEach((item2) => {
+      item2.classList.remove("activetabbbbb");
+    });
+    item.classList.add("activeaaa");
+    document.querySelector(id).classList.add("activetabbbbb");
+  });
+  document.querySelector(".slidersecondto__a").click();
 });
 
 //! для вспливающего меню
-$(document).ready(function () {
 
-  $(".header-center__aa").click(function (e) { 
-      e.preventDefault();
-      $(".header-center__aa").toggleClass("headertopactivebut");
-      $(".header-center__ulul").slideToggle(200);
-      $(".header-center__triugol").slideToggle(200); 
-
-   });
-
+let headercenter = document.querySelector(".header-center__aa");
+headercenter.addEventListener("click", function headerCenter(event) {
+  event.preventDefault();
+  headercenter.classList.toggle(".headertopactivebut");
+  document.querySelector(".header-center__ulul").classList.toggle("active");
+  document.querySelector(".header-center__triugol").classList.toggle("active");
 });
 
-$(document).ready(function () {
-   $(".mytabssome__a").click(function (e) { 
-      e.preventDefault();
-      $(".mytabssome__a").removeClass("activepopapitem");
-      $(".mytabssome__content").removeClass("activetabsss");
-      $(this).addClass("activepopapitem");
-      $($(this).attr("href")).addClass("activetabsss");
-   });
-   $(".mytabssome__a:first").click();
+// tabs on native javascript
+
+let linktabs = document.querySelectorAll(".mytabssome__a");
+let tabscontent = document.querySelectorAll(".mytabssome__content");
+linktabs.forEach((item) => {
+  item.addEventListener("click", function ftabss(event) {
+    event.preventDefault();
+    let id = event.target.getAttribute("href");
+    linktabs.forEach(function name(item2) {
+      item2.classList.remove("activepopapitem");
+    });
+    tabscontent.forEach(function name(item2) {
+      item2.classList.remove("activetabsss");
+    });
+    item.classList.toggle("activepopapitem");
+    document.querySelector(id).classList.toggle("activetabsss");
+  });
+  document.querySelector(".mytabssome__a").click();
 });
 
-const swiper6 =new Swiper('.mysponsorslider', 
-{ 
-
-
-
-slidesPerView: 6,
-
-spaceBetween: 30,
-centerSlides:true,
-loop: true,
-
-      breakpoints: {
-     
-      "320": {
-         slidesPerView:1,
-         centerSlides:true,
-         spaceBetween: 4,
-       
-      },
-      "420": {
-         slidesPerView: 3  ,
-         centerSlides:true,	
-         spaceBetween: 0,
-      },
-      "600": {
-         slidesPerView: 3  ,
-         centerSlides:true,	
-         spaceBetween: 0,
-      },
-      "750": {
-         slidesPerView: 4,
-         centerSlides:true,	
-         spaceBetween: 0,
-      },
-      "768": {
-         slidesPerView: 5,
-         centerSlides:true,	
-         spaceBetween: 0,
-      },
-      "990": {
-         slidesPerView: 6,
-      },
-  
-      }
+let gradient = document.querySelector(".linedegry__a");
+gradient.addEventListener("mouseenter", function Gradient() {
+  document.querySelector(".linedegry__uptext").classList.add("blackcolor");
+  document.querySelector(".linedegry__loertext").classList.add("blackcolor");
+});
+gradient.addEventListener("mouseleave", function Gradient() {
+  document.querySelector(".linedegry__uptext").classList.remove("blackcolor");
+  document.querySelector(".linedegry__loertext").classList.remove("blackcolor");
 });
 
-const swiper8 =new Swiper('.popular-categories', 
-{ 
+// еще одни табы) on native javascritp
 
-navigation: {
-nextEl:'.downgoodsec__nextarow',
-prevEl:'.downgoodsec__prevarow',
- },
-speed: 800,
+let tabslink = document.querySelectorAll(".secondtab__a");
+let tabscontentt = document.querySelectorAll(".secondtab__mytab");
 
-
-observer: true,
-//Для обновления слайдера при изменении родителя
-observeParent: true,
-//для обновления слайдера при изменения дочерних елементов
-observeSlideChildren: true,
-//для автопроигривания слайдера 
-
-autoplay: {
- 
-delay: 3000,
-},
-
-slidesPerView: 4,
-
-spaceBetween: 30,
-// ! Изменения моего главного слайдера
-breakpoints: {
- '320': {
-  slidesPerView:1,
-  },
-  '768': {
- slidesPerView:2,
-  },
-  '900': {
- slidesPerView:3, 
- spaceBetween: 0,
- },
-
-'1100': {
-  slidesPerView:4,
-  },
-}
+tabslink.forEach((item) => {
+  item.addEventListener("click", function tabsInfo(event) {
+    event.preventDefault();
+    let id = event.target.getAttribute("href");
+    tabslink.forEach((item2) => {
+      item2.classList.remove("activeseca");
+    });
+    tabscontentt.forEach((item2) => {
+      item2.classList.remove("activesecondtab");
+    });
+    item.classList.add("activeseca");
+    document.querySelector(id).classList.add("activesecondtab");
+  });
+  document.querySelector(".secondtab__a").click();
 });
 
+let tabslink22 = document.querySelectorAll(".tabulation__a");
+let tabscontentt22 = document.querySelectorAll(".slidersecondto__poid");
 
-
-
-let tapSlider = document.getElementById('polzunok');
-
-noUiSlider.create(tapSlider, {
-    start: 9,
-    step: 1,
-    behaviour: 'tap',
-    connect: [false, true],
-    range: {
-        'min': 1,
-        'max': 24,
-    }
-
+tabslink22.forEach((item) => {
+  item.addEventListener("click", function tabsInfo(event) {
+    event.preventDefault();
+    let id = event.target.getAttribute("href");
+    tabslink22.forEach((item2) => {
+      item2.classList.remove("activea");
+    });
+    tabscontentt22.forEach((item2) => {
+      item2.classList.remove("contenttab-active");
+    });
+    item.classList.add("activea");
+    document.querySelector(id).classList.add("contenttab-active");
+  });
+  document.querySelector(".tabulation__a").click();
 });
-
-
-$(document).ready(function () {
-   $(".linedegry__a").hover(function () {
-     $(".linedegry__uptext , .linedegry__loertext").toggleClass("blackcolor");
-   });
-});
-
-
-
-
-const swiper10 =new Swiper('.secondtab__slider', 
-{ 
-
-navigation: {
-nextEl:'.swiper-button-next',
-prevEl:'.swiper-button-prev',
- },
-
-
-
-speed: 800,
-
-// Лутше по умолчанию использовать в каждом слайдере 
-observer: true,
-observeParent: true,
-//  
-// observeSlideChildren: true,
-
-
-autoplay: {
-//задержка при количество секунд на задержку слайдера  
-delay: 3000,
-},
-
-slidesPerView: 3,
-// Отступ между слайдами если указивает для показа несколько слайдеров
-spaceBetween: 30,
-// для прокрутки бесконечно слайда нюанси не работает при скроле так что эго ,надо отключать,не работает  с мультирадностю 
-
-
-});
-
-
-
-
-
-$(document).ready(function () {
-   $(".secondtab__a").click(function (e) { 
-      e.preventDefault();
-      $(".secondtab__a").removeClass("activeseca");
-      $(".secondtab__mytab").removeClass("activesecondtab");
-      $(this).addClass("activeseca");
-      $($(this).attr("href")).addClass("activesecondtab");
-   });
-   $(".secondtab__a:first").click();
-});
-
-
-   $(document).ready(function(){
-      $(".tabulation__a").click(function(e){ 
-         e.preventDefault();
-         $(".tabulation__a").removeClass("activea");
-         $(".content-tabs__content").removeClass("contenttab-active");
-         $(this).addClass("activea");
-         $($(this).attr('href')).addClass("contenttab-active");
-          });
-          $(".tabulation__a:first").click();
-   });
-
-
-   // работа бургер меню
-
-
-
-new Swiper('.tabulation__slider', 
-{ 
-
-navigation: {
-nextEl:'.ssbutton-next',
-prevEl:'.ssbutton-prev',
- },
-// Для обновления свайпера при изменения елементов слайдера
-observer:true,
-//  Для обновления слайдера при изменении родителя
-observeParent:true,
-//  для обновления слайдера при изменения дочерних елементов 
-observeSlideChildren:true,
-
-speed: 800,
-
-autoplay: {
- 
-delay: 3000,
-},
-
-slidesPerView: 4,
-spaceBetween: 30,
-
-
-});
-
-new Swiper('.slider222', 
-{ 
-   navigation: {
-   nextEl:'.next',
-   prevEl:'.last',
-   
-    },
-  pagination: {
-      el:'.swiper-pagination',
-      clickable: true,
-      }, 
-
-      loop: true,
-      speed: 800,
-   autoplay: {
-      delay: 3000,
-      },
-
-}),
-
-new Swiper('.myslider5', 
-{ 
-
-      pagination: {
-      el:'.swiper-pagination',
-
-      clickable: true,
-      }, 
-      speed:900,
-      loop: true,
-      autoplay: {
-      delay: 3000,
-      },
-});
-
-new Swiper('.sliderflex2', 
-{ 
-
-      pagination: {
-      el:'.swiper-pagination',
-      clickable: true,
-      }, 
-      speed: 800,
-      autoplay: {
-      delay: 3000,
-      },
-      slidesPerView: 1,
-      loop: true,
-      effect:'cube',
-});
-
-
-new Swiper('.sliderflex11', 
-{ 
-pagination: {
-el:'.swiper-pagination',
-clickable: true,
-}, 
-
-speed: 800,
-autoplay: {
- 
-delay: 3000,
-},
-loop: true,
-
-
-});
-
-new Swiper('.sliderfourinitial', 
-{ 
-
-   
-
-pagination: {
-el:'.swiper-pagination',
-
-clickable: true,
-}, 
-speed: 800,
-autoplay: { 
-delay: 3000,
-},
-loop: true,
-
-
-});
-
-
-
 
 // работа с картинками метод ибд
-function ibg(){
+function ibg() {
+  let ibg = document.querySelectorAll(".ibg");
+  for (var i = 0; i < ibg.length; i++) {
+    if (ibg[i].querySelector("img")) {
+      ibg[i].style.backgroundImage =
+        "url(" + ibg[i].querySelector("img").getAttribute("src") + ")";
+    }
+  }
+}
+ibg();
 
-   $.each($('.ibg'), function(index, val) {
-   if($(this).find('img').length>0){
-   $(this).css('background-image','url("'+$(this).find('img').attr('src')+'")');
-   }
-   });
-   }
-   
-   ibg();
+// timer для часов on  native javascript;
 
+let hh = document.querySelector(".time__hours");
+let mm = document.querySelector(".time__minutes");
+let ss = document.querySelector(".time__second");
 
+let ttimer = setInterval(Timer, 1000);
 
+function Timer() {
+  let hours = +hh.innerHTML;
+  let minut = +mm.innerHTML;
+  let second = +ss.innerHTML;
 
- 
+  if (second == 0) {
+    second--;
+    second = 60;
+    if (minut == 0) {
+      hours--;
+      minut = 60;
+    }
+    minut--;
+  } else {
+    second--;
+  }
 
- var currentyear=new Date().getFullYear();
- var thischristmasyear=(new Date().getMonth()==0 && new Date().getDate()==1)? currentyear : currentyear + 1 ; 
- var christmas="january 1, "+thischristmasyear+" 0:0:00";
- var currentTime=new Date();
- var targetdate=new Date(christmas);  		
- var timediff=(targetdate-currentTime)/1000;
- var oneMinute=60;
- var oneHour=60*60;
- var oneDay=60*60*24;
- var dayfield=Math.floor(timediff/oneDay);
- var hourfield=Math.floor((timediff-dayfield*oneDay)/oneHour);
- var minutefield=Math.floor((timediff-dayfield*oneDay-hourfield*oneHour)/oneMinute);
- var secondfield=Math.floor((timediff-dayfield*oneDay-hourfield*oneHour-minutefield*oneMinute));
+  ss.innerHTML = second;
 
+  if (hours == 0 && minut == 0 && second == 0) {
+    document.querySelector(".time").remove();
+  }
+}
 
+// ползунок на нативнов джава скрипте 
+let polzunokjs = document.querySelector(".polzunokjs");
 
- $(function(counts){
- $('.c-block:eq(0) .bl-inner span').text(dayfield);
- $('.c-block:eq(1) .bl-inner span').text(hourfield);
- $('.c-block:eq(2) .bl-inner span').text(minutefield);
- $('.c-block:eq(3) .bl-inner span').text(secondfield);
-
-   counts();
-   setInterval(counts,1000);
-
- });
-
-
+polzunokjs.addEventListener("change", function polzunok(event) {
+  document.querySelector(".polzunokrange").innerHTML = +polzunokjs.value;
+});
