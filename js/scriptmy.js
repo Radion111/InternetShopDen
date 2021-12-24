@@ -18,8 +18,8 @@ const swiper1 = new Swiper(".bigslider2colum ", {
 const swiper2 = new Swiper(".myslidertttt ", {
   observer: true,
   observeParent: true,
+  observeSlideChildren: true,
 
-  // observeSlideChildren: true,
   // для добавления стрелок можем использовать любой класс
   navigation: {
     nextEl: ".slidersecondto__next",
@@ -103,7 +103,7 @@ const swiper4 = new Swiper(".myslidermyfix ", {
 
 const swiper5 = new Swiper(".slider-firsttt", {
   pagination: {
-    el: ".swiper-pagination",
+    el: ".pag22",
     clickable: true,
   },
 
@@ -320,18 +320,6 @@ const swiper10 = new Swiper(".secondtab__slider", {
   // для прокрутки бесконечно слайда нюанси не работает при скроле так что эго ,надо отключать,не работает  с мультирадностю
 });
 
-// ! ползунок переписать
-noUiSlider.create(tapSlider, {
-  start: 9,
-  step: 1,
-  behaviour: "tap",
-  connect: [false, true],
-  range: {
-    min: 1,
-    max: 24,
-  },
-});
-
 // ! Меню бургер
 
 let burgermenu = document.querySelector(".burger-menu");
@@ -346,18 +334,22 @@ burgermenu.addEventListener("click", function burgerMenu(event) {
 let slideralllink = document.querySelectorAll(".slidersecondto__a");
 let sliderconten = document.querySelectorAll(".slidersecondto__poid");
 
+// ! вносим тут изменения
 slideralllink.forEach((item) => {
   item.addEventListener("click", function name(event) {
     event.preventDefault();
     let id = event.target.getAttribute("href");
+    console.log(id);
     slideralllink.forEach((item2) => {
-      item2.classList.remove("activeaaa");
+      item2.classList.remove("active");
     });
+
     sliderconten.forEach((item2) => {
-      item2.classList.remove("activetabbbbb");
+      item2.classList.remove("active");
     });
-    item.classList.add("activeaaa");
-    document.querySelector(id).classList.add("activetabbbbb");
+
+    item.classList.toggle("active");
+    document.querySelector(id).classList.toggle("active");
   });
   document.querySelector(".slidersecondto__a").click();
 });
@@ -423,25 +415,6 @@ tabslink.forEach((item) => {
   document.querySelector(".secondtab__a").click();
 });
 
-let tabslink22 = document.querySelectorAll(".tabulation__a");
-let tabscontentt22 = document.querySelectorAll(".slidersecondto__poid");
-
-tabslink22.forEach((item) => {
-  item.addEventListener("click", function tabsInfo(event) {
-    event.preventDefault();
-    let id = event.target.getAttribute("href");
-    tabslink22.forEach((item2) => {
-      item2.classList.remove("activea");
-    });
-    tabscontentt22.forEach((item2) => {
-      item2.classList.remove("contenttab-active");
-    });
-    item.classList.add("activea");
-    document.querySelector(id).classList.add("contenttab-active");
-  });
-  document.querySelector(".tabulation__a").click();
-});
-
 // работа с картинками метод ибд
 function ibg() {
   let ibg = document.querySelectorAll(".ibg");
@@ -486,9 +459,10 @@ function Timer() {
   }
 }
 
-// ползунок на нативнов джава скрипте 
+// ползунок на нативнов джава скрипте
 let polzunokjs = document.querySelector(".polzunokjs");
 
 polzunokjs.addEventListener("change", function polzunok(event) {
-  document.querySelector(".polzunokrange").innerHTML = +polzunokjs.value;
+  document.querySelector(".colummainn__polzunokrange").innerHTML =
+    +polzunokjs.value;
 });

@@ -2095,15 +2095,20 @@ body {
    display: none;
    min-width: 0px;
 
+   &.active {
+      display: block;
+   }
 }
 
 .myslidertttt {
-   display: none;
+   min-width: 0px;
 }
 
 .contenttab-active {
    display: block;
 }
+
+
 
 .secondtab {
    background-color: white;
@@ -2560,8 +2565,32 @@ body {
 .colummainn__miroww {
    display: flex;
    justify-content: space-between;
+   align-items: center;
    margin-bottom: 10px;
 }
+
+.colummainn__polzunokrange {
+   font-style: normal;
+   font-weight: normal;
+   font-size: 17px;
+   line-height: 16px;
+   text-align: center;
+   color: #000000;
+}
+
+.colummainn__polzunokrange::-webkit-slider-thumb {
+   appearance: none;
+   width: 11px;
+   height: 11px;
+   border-radius: 100%;
+   background: #e9b405;
+   cursor: pointer;
+}
+
+.inputform {
+   margin-top: 15px;
+}
+
 
 .colummainn__hurrytext {
    margin: 10px 0px 20px 0px;
@@ -2709,6 +2738,11 @@ body {
    line-height: 15px;
    text-align: right;
    color: grey;
+
+   &.active {
+      color: black;
+      font-weight: 600;
+   }
 }
 
 .slidersecondto__arrows {
@@ -4040,12 +4074,31 @@ body {
    }
 }
 
-.swiper-container {
-   overflow: hidden;
-}
+
+
 
 .polzunokjs {
+   // свойство для отображения элемента, используя базовые стили платформы
+   -webkit-appearance: none;
+   border: none;
+   border-radius: 18px;
+   background: #FAAD3D;
+   outline: none;
    width: 100%;
+   height: 25px;
+   margin-top: 10px;
+}
+
+//  Псевдоэлемент CSS ::-webkit-slider-thumb представляет собой ползунок
+//  ,передвигаемый пользователем по линейке элемента <input> типа "range"
+//  для изменения числового значения атрибута value
+
+.polzunokjs::-webkit-slider-thumb {
+
+   -webkit-appearance: none;
+   width: 40px;
    height: 40px;
-   padding: 20px;
+   border-radius: 7px;
+   background: #FAAD3D;
+
 }
