@@ -4100,5 +4100,10 @@ body {
    height: 40px;
    border-radius: 7px;
    background: #FAAD3D;
-
+// свойство для отображения элемента, используя базовые стили платформы
+-webkit-appearance: none;
+//Псевдоэлемент CSS ::-webkit-slider-thumb представляет собой ползунок
+//,передвигаемый пользователем по линейке элемента <input> типа 'range' 
+//  для изменения числового значения атрибута value
+//.polzunokjs::-webkit-slider-thumb {
 }
